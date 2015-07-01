@@ -1,18 +1,7 @@
 # Enter your procedural solution here!
 
 def collect_multiples(limit)
-  array = []
-  n = 1
-  while n < limit
-    if (n % 3 == 0)
-      array << n
-    elsif (n % 5 ==0)
-      array << n
-    end
-
-    n+=1
-  end
-  array
+  (1..limit-1).to_a.select{|num| (num % 3 == 0) || (num % 5 == 0)}
 end
 
 def sum_multiples(limit)
